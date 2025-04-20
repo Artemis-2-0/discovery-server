@@ -2,4 +2,9 @@ spring:
   application:
     name: discovery-server
   config:
-    import: configserver:http://localhost:6090
+    import: configserver:${CONFIG_SERVER_URL}
+logging:
+  level:
+    org.springframework.cloud.config: DEBUG
+    org.springframework.retry: DEBUG
+
